@@ -22,9 +22,9 @@ files.tab é um arquivo tabular onde a primeira coluna contém a read1 e a segun
 
 Após rodar o first_fastqc.pl, qualquer um dos demais outros scripts podem ser utilizados junto com o arquivo files.tab
 
-lista de scripts:
-trimmo_automatic.pl (trima as sequencias por qualidade)
-fastq_direc.pl (roda o fastqc para sequencias trimadas)
-velvetOp_automatic.pl (roda a montagem com o velvetOptimiser)
-count_contig.pl (realiza a contagem dos contigs)
-prokka_automatic.pl (realiza a anotação com o prokka)
+## lista de scripts:
+- trimmo_automatic.pl (trima as sequencias por qualidade)
+- fastq_direc.pl (roda o fastqc para sequencias trimadas)
+- velvetOp_automatic.pl (roda a montagem com o velvetOptimiser)
+- count_contig.pl (realiza a contagem dos contigs)
+- prokka_automatic.pl (realiza a anotação com o prokka)
