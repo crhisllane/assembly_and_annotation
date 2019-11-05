@@ -9,8 +9,15 @@ scripts para automatizar o processo de montagem e anotação de genomas paired
 - VelvetOptimiser (https://github.com/tseemann/VelvetOptimiser)
 - Prokka (https://github.com/tseemann/prokka)
 
-contém arquivos para automatizar o processo de montagem e anotação de genomas
+##rodando automatizado
+neste modo um unico comando é necessário, e ser realizado a análise da qualidade do sequenciamento, a trimagem, a análise da trimagem, a montagem, a contagem de contigs e a anotação
 
+AssemblyAnnot.pl files.tab dir_dos_scripts
+
+- files.tab é um arquivo tabular onde a primeira coluna contém a read1 e a segunda coluna contém a read2
+- dir_dos_scripts  o caminho completo para os scrits disponíveis aqui
+
+##rodando um a um
 O primeiro passo necessário é o de análise do sequenciamento com fastaqc
 dessa forma é necessário rodar inicialmente:
 
