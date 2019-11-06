@@ -10,7 +10,7 @@ assembly_and_annotation/
 - Prokka (https://github.com/tseemann/prokka)
 
 ## Rodando automatizado
-neste modo um unico comando é necessário, e ser realizado a análise da qualidade do sequenciamento, a trimagem, a análise da trimagem, a montagem, a contagem de contigs e a anotação
+neste modo um unico comando é necessário, onde será realizado a análise da qualidade do sequenciamento, a trimagem, a análise da trimagem, a montagem, a contagem de contigs e a anotação
 
 
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
