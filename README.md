@@ -1,7 +1,7 @@
 # assembly_and_annotation
 assembly_and_annotation/
 
-**scripts para automatizar o processo de montagem e anotação de genomas paired
+*scripts para automatizar o processo de montagem e anotação de genomas paired*
 
 ## Dependências
 - FastQC (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
