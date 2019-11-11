@@ -26,8 +26,6 @@ foreach my $linelist (@lineslist){
 	my $reverse= $';
 	print "forward:$forward\treverse:$reverse\n";
     chdir ("Dir_$forward\_AND_$reverse");
-    #system ("cp ../*$forward* .");
-    #system ("cp ../*$reverse* .");
 	system ("trimmomatic-0.38.jar PE -phred33 $forward $reverse output_$forward\_paired.fq.gz output_$forward\_unpaired.fq.gz output_$reverse\_paired.fq.gz output_$reverse\_unpaired.fq.gz ILLUMINACLIP:NexteraPE-PE.fa:2:30:10 LEADING:30 AVGQUAL:33 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:200");
     chdir ("..");
 }

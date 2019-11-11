@@ -32,6 +32,7 @@ foreach my $linelist (@lineslist){
     chdir ("$velvetDir[0]");
 	my $contigs = `grep '>' contigs.fa | wc -l`;
     print OUT ("$forward\_AND_$reverse\t$contigs\n");
+	system("assembly-stats contigs.fa > assembly-stats.log");
     chdir ("..");
     chdir ("..");
 }

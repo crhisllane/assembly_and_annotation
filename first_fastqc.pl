@@ -4,9 +4,10 @@
 
 
 
-my $usage="\nCommand Line:\n$0 [lista de arquivos]\n\n"; 
+my $usage="\nCommand Line:\n$0 [lista de arquivos] [diretorio dos arquivos fastq]\n\n"; 
 
 my $lista = $ARGV[0] || die "$usage";
+my $dirF = $ARGV[1] || die "$usage";
 
 open(LISTA,"$lista");
 
@@ -19,6 +20,8 @@ while($line=<LISTA>){
 }
 close LISTA;
 
+$dirF=~s/\/$//;
+
 foreach my $linelist (@lineslist){
 	$linelist=~m/\t/;
 	my $forward = $`;
@@ -27,10 +30,11 @@ foreach my $linelist (@lineslist){
 	print "forward:$forward\treverse:$reverse\n";
    	mkdir ("Dir_$forward\_AND_$reverse");
 	chdir ("Dir_$forward\_AND_$reverse");
-    system ("cp ../*$forward* .");
-    system ("cp ../*$reverse* .");
+    system ("ln -s $dirF/$forward $forward");
+    system ("ln -s $dirF/$reverse $reverse");
 	mkdir ("FASTQC_beforeTrim");
-	system ("fastqc output_* -o FASTQC_beforeTrim");
+	system ("fastqc $forward -o FASTQC_beforeTrim");
+	system ("fastqc $reverse -o FASTQC_beforeTrim");
 	chdir ("..");
 }
 
