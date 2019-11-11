@@ -34,7 +34,7 @@ dessa forma é necessário rodar inicialmente:
     
 <!--endsec-->
 
-- first_fastqc.pl cria os diretrios necessários para todos os scripts e roda o fastqc para todas as sequencias
+- first_fastqc.pl cria os diretórios necessários para todos os scripts e roda o fastqc para todas as sequencias
 - files.tab é um arquivo tabular onde a primeira coluna contém a read1 e a segunda coluna contém a read2
 - dir_dos_fastq caminho completo para diretório onde consta todos os dastq
 
